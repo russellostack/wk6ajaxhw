@@ -1,4 +1,4 @@
-var movies = ["Firefly", "cars", "Finding Nemo", "Transformers", "What We Do in the Shadows", "Monty Python's the Holy Grail,"];
+var movies = ["Firefly", "Cars", "Finding Nemo", "Transformers", "What We Do in the Shadows", "Monty Python's the Holy Grail,"];
 
 //function that takes movie array and adds buttons to the html initialized with a data-movie attribute.
 function buttonMaker() {

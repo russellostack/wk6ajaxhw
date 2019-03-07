@@ -1,3 +1,9 @@
+body{
+    background-image: url(images\giphy.gif);
+}
+.card{
+    background-color: #008080;
+}
 p{
     font-size:12px;
     text-align: center;
@@ -13,6 +19,7 @@ button{
     margin:5px;
     padding:10px;
     display: inline;
+    font-size: 16px;
 }
 label{
     padding: 12px 12px 12px 0;
@@ -21,26 +28,109 @@ label{
 }
 #movie-form{
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    
-}
-#gif-div{
-
+    display:center;
 }
 #movie-input{
-
+    font-size: 16px;
+    text-align: center;
 }
-#movie-button{
-
-}
-.gif{
-
+#gif-div{
+    float:center;
 }
 .container{
-
+    max-width: 960px;
 }
 .card{
-
+    margin:auto;
+    padding:10px;
 }
 .movie-button{
+    padding:5px;
+}
+.movie-button:hover{
+    color: red;
+}
+@media screen and (max-width: 960px){
+p{
+    font-size: 12px;
+    text-align: center;
+    margin:auto;
+}
+.btn{
+    margin:3px;
+    padding:8px;
+    display: inline;
+    font-size: 14px;
+}
+label{
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+    font-size:16px;
+}
+#movie-input{
+    font-size: 12px;
+    text-align: center;
+}
+#gif-div{
+    float:center;
+}
+.container{
+    max-width: 850px;
+}
 
+}
+@media screen and (max-width: 600px){
+p{
+    font-size: 9px;
+    text-align: left;
+    margin:auto;
+}
+.btn{
+    margin:3px;
+    padding:5px;
+    display: inline;
+    font-size: 12px;
+}
+label{
+    padding: 8px 8px 8px 0;
+    display: inline-block;
+    font-size:12px;
+}
+#movie-input{
+    font-size: 8px;
+    text-align: center;
+}
+#gif-div{
+    float:left;
+}
+.container{
+    max-width: 550px;
+}
+}
+@media screen and (max-width: 400px){
+p{
+    text-align: left;
+    margin:auto;
+}
+.btn{
+    margin:3px;
+    padding:5px;
+    display: inline;
+    font-size: 10px;
+}
+label{
+    padding: 5px 5px 5px 0;
+    display: inline-block;
+    font-size:8px;
+}
+#movie-input{
+    font-size: 8px;
+    text-align: center;
+}
+#gif-div{
+    float:left;
+}
+.container{
+    max-width: 350px;
+}
 }
