@@ -1,0 +1,46 @@
+p{
+    font-size:12px;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin:auto;
+}
+img{
+    padding:10px;
+    margin:auto;
+    display:block;
+}
+button{
+    margin:5px;
+    padding:10px;
+    display: inline;
+}
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size:20px;
+}
+#movie-form{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    
+}
+#gif-div{
+
+}
+#movie-input{
+
+}
+#movie-button{
+
+}
+.gif{
+
+}
+.container{
+
+}
+.card{
+
+}
+.movie-button{
+
+}
