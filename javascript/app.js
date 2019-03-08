@@ -36,16 +36,17 @@ $(document).on("click", ".movie-button", function () {
                     var rating = giphyObj[i].rating;
                     var p = $("<p>").text("Rating: " + rating);
                     var gifImg = $("<img>");
-                    gifImg.attr("src", giphyObj[i].images.fixed_width_still.url);
-                    gifImg.attr("data-still", giphyObj[i].images.fixed_width_still.url);
+                    gifImg.attr("src", giphyObj[i].images.fixed_width.url);
                     gifImg.attr("data-animate", giphyObj[i].images.fixed_width.url);
+                    gifImg.attr("data-still", giphyObj[i].images.fixed_width_still.url);
                     gifImg.attr("title", giphyObj[i].title);
                     // If i change this attribute to "animate" why does it not initialize every gif as an animated gif?
-                    gifImg.attr("data-state", "still");
+                    gifImg.attr("data-state", "");
                     gifImg.addClass("gif");
                     newGifDiv.append(gifImg);
                     newGifDiv.prepend(p);
                     $("#gif-div").append(newGifDiv);
+                    gifImg.attr("data-state", "animate");
                 }
             }
         })
@@ -66,6 +67,7 @@ $("#movie-button").on("click", function (event) {
 $(document).on("click", ".gif", function () {
 
     var state = $(this).attr("data-state");
+    console.log(state);
     if (state === "still") {
         $(this).attr("src", $(this).attr("data-animate"));
         $(this).attr("data-state", "animate");

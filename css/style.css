@@ -1,8 +1,12 @@
 body{
-    background-image: url(images\giphy.gif);
+    background-image: url(../images/giphy.gif);
+    background-size: cover;
+    height:100vh;
 }
 .card{
     background-color: #008080;
+    margin:auto;
+    padding:10px;
 }
 p{
     font-size:12px;
@@ -11,9 +15,10 @@ p{
     margin:auto;
 }
 img{
-    padding:10px;
     margin:auto;
     display:block;
+    box-shadow: 10px 10px 20px black;
+    width:400px;
 }
 button{
     margin:5px;
@@ -40,8 +45,7 @@ label{
 .container{
     max-width: 960px;
 }
-.card{
-    margin:auto;
+.gifs{
     padding:10px;
 }
 .movie-button{
