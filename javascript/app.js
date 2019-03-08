@@ -1,6 +1,7 @@
 var movies = ["Firefly", "Cars", "Finding Nemo", "Transformers", "What We Do in the Shadows", "Monty Python's the Holy Grail,"];
 
-//function that takes movie array and adds buttons to the html initialized with a data-movie attribute.
+//function that takes movie array and adds buttons to the html initialized with a data-movie attribute for each movie.
+// can and will be called when new buttons are added.
 function buttonMaker() {
     $("#gif-div").empty();
     for (var i = 0; i < movies.length; i++) {
@@ -12,8 +13,8 @@ function buttonMaker() {
     };
 };
 
-//event listener for each gif button made, encompases ajax call to giphy api as well as pushing the results to html. 
-// Do i need to keep the gifs from previous searches?
+//event listener for each gif button made, encompases ajax call to giphy api as well as pushing the results to html. adds 
+// Do i need to keep the gifs from previous searches? if not keep as is, if so remove line 18.
 $(document).on("click", ".movie-button", function () {
     $("#gif-div").empty();
     var newMovie = $(this).attr("data-movie");
@@ -24,9 +25,7 @@ $(document).on("click", ".movie-button", function () {
         method: "GET"
     })
         .then(function (response) {
-            // console.log(this);
             var giphyObj = response.data;
-            console.log(giphyObj);
             for (var i = 0; i < giphyObj.length; i++) {
 
                 if (giphyObj[i].rating !== "r") {
@@ -40,7 +39,6 @@ $(document).on("click", ".movie-button", function () {
                     gifImg.attr("data-animate", giphyObj[i].images.fixed_width.url);
                     gifImg.attr("data-still", giphyObj[i].images.fixed_width_still.url);
                     gifImg.attr("title", giphyObj[i].title);
-                    // If i change this attribute to "animate" why does it not initialize every gif as an animated gif?
                     gifImg.attr("data-state", "");
                     gifImg.addClass("gif");
                     newGifDiv.append(gifImg);
@@ -67,7 +65,6 @@ $("#movie-button").on("click", function (event) {
 $(document).on("click", ".gif", function () {
 
     var state = $(this).attr("data-state");
-    console.log(state);
     if (state === "still") {
         $(this).attr("src", $(this).attr("data-animate"));
         $(this).attr("data-state", "animate");
